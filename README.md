@@ -84,7 +84,7 @@ Mac 包适用于 Apple Silicon（M 系列）；Windows 包适用于 10 / 11 x64�
 | Windows 10 / 11 · x64 | [下载 Windows 预览版 · 约 164 MB](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-3.0.0-Windows-x64.zip) | 完整解压后打开 `QuietReader.exe`；包内脚本可创建桌面快捷方式 |
 | 源码 | [浏览代码](src) / [下载源码包](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-3.0.0-source.zip) | MIT 许可，自由学习与修改 |
 
-Mac 包采用临时签名，尚未获得 Apple 公证。Windows 包没有发布者代码签名，已完成运行库、架构与资源校验，**尚未经过 Windows 实机测试**，因此标记为预览版。Windows 请保留完整解压目录，不要只复制 EXE。[校验文件](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/SHA256SUMS.txt) · [验证记录](docs/VALIDATION.md)
+Mac 包采用临时签名，尚未获得 Apple 公证。 **首次打开出现「Apple 无法验证」时，请先看[Mac 首次打开说明](docs/USER_GUIDE.md#mac-首次打开被拦截怎么办)。**Windows 包没有发布者代码签名，已完成运行库、架构与资源校验，**尚未经过 Windows 实机测试**，因此标记为预览版。Windows 请保留完整解压目录，不要只复制 EXE。[校验文件](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/SHA256SUMS.txt) · [验证记录](docs/VALIDATION.md)
 
 <div align="center">
 
