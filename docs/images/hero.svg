@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="480" viewBox="0 0 1440 480" role="img" aria-labelledby="title desc">
+<title id="title">静读：读 TXT，不必先付费。</title><desc id="desc">免费开源的桌面小说阅读器。背景自由换，字号随心调，故事慢慢读。四套完整界面，无需订阅，本机保存。</desc>
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#102820"/><stop offset="1" stop-color="#233f34"/></linearGradient><radialGradient id="glow"><stop stop-color="#bfdba2" stop-opacity=".12"/><stop offset="1" stop-color="#bfdba2" stop-opacity="0"/></radialGradient></defs>
+<rect width="1440" height="480" rx="24" fill="url(#bg)"/><circle cx="1190" cy="180" r="340" fill="url(#glow)"/>
+<g font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif">
+<rect x="64" y="48" width="44" height="44" rx="12" fill="none" stroke="#bdd39f"/><text x="86" y="79" text-anchor="middle" fill="#d5e6bc" font-size="28">阅</text>
+<text x="124" y="78" fill="#e9efdc" font-size="25" font-weight="600" letter-spacing="4">静读</text><text x="212" y="76" fill="#9eb9a5" font-size="14" letter-spacing="3">QUIET READER</text>
+<text x="64" y="188" fill="#f3f4e8" font-size="62" font-weight="700">读 TXT，不必先付费。</text>
+<text x="68" y="249" fill="#d0dfb7" font-size="29">背景自由换，字号随心调，故事慢慢读。</text>
+<text x="68" y="300" fill="#a8c0b0" font-size="20">给 Mac 和 Windows，一个好看、舒服的本地阅读器。</text>
+<g fill="#28483b" stroke="#4a6855"><rect x="68" y="344" width="154" height="42" rx="21"/><rect x="236" y="344" width="154" height="42" rx="21"/><rect x="404" y="344" width="154" height="42" rx="21"/><rect x="572" y="344" width="154" height="42" rx="21"/></g>
+<g fill="#dce8ca" font-size="17" text-anchor="middle"><text x="145" y="372">免费开源</text><text x="313" y="372">四套完整 UI</text><text x="481" y="372">无需订阅</text><text x="649" y="372">本机保存</text></g>
+<text x="68" y="438" fill="#819f8e" font-size="14" letter-spacing="2">你的书架，你的背景，你的阅读节奏。</text>
+<g transform="translate(1085 106) rotate(8)"><rect x="-18" y="18" width="224" height="270" rx="16" fill="#0b2018" opacity=".3"/><rect width="224" height="270" rx="16" fill="#c5d6ac"/><path d="M20 0V270" stroke="#9cb784" stroke-width="2"/><text x="122" y="102" text-anchor="middle" fill="#294638" font-size="52" font-weight="600" letter-spacing="5">TXT</text><path d="M57 141h111M57 161h111M57 181h83" stroke="#7f9a6c" stroke-width="3" stroke-linecap="round"/><path d="M167 0v55l16-10 16 10V0" fill="#6b8d60"/><text x="122" y="235" text-anchor="middle" fill="#54744d" font-size="13" letter-spacing="3">JUST READ.</text></g>
+</g></svg>
