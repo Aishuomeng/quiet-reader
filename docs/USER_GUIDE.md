@@ -2,6 +2,9 @@
 
 ## Mac 首次打开被拦截怎么办？
 
+**[点这里下载设置快捷入口并查看简明指引](MAC_FIRST_OPEN.md)**
+
+
 当前 macOS 发行包采用本地临时签名，尚未经过 Apple 开发者证书签名与公证。从互联网下载后，系统可能提示「Apple 无法验证静读是否包含恶意软件」。这表示系统无法验证该发行包，不等同于已经检测到恶意软件。
 
 如果你确认应用来自本项目 [官方 Releases](https://github.com/Aishuomeng/quiet-reader/releases)，且下载文件与发行页 SHA256SUMS.txt 的校验值一致，仍决定运行它，可按 [Apple 官方说明](https://support.apple.com/zh-cn/102445)操作：

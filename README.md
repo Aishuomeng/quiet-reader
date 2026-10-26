@@ -7,7 +7,10 @@
 **不想为 TXT 阅读器付费？换个背景也不想再解锁会员？**  
 试试静读：免费开源，把阅读界面调成你喜欢的样子。
 
-### [↓ 下载 Mac 版](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-3.0.0-macOS-arm64.zip)　｜　[↓ 下载 Windows 预览版](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-3.0.0-Windows-x64.zip)
+### [↓ 下载 Mac 版](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-3.0.0-macOS-arm64-guided.zip)　｜　[↓ 下载 Windows 预览版](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-3.0.0-Windows-x64.zip)
+
+**[Mac 提示“Apple 无法验证”？点这里开始 →](docs/MAC_FIRST_OPEN.md)**  
+[已经下载 App？只下载首次打开引导（约 3 KB）](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-Mac-First-Open.zip)
 
 [全部发行文件](https://github.com/Aishuomeng/quiet-reader/releases/tag/v3.0.0) · [使用指南](docs/USER_GUIDE.md) · [构建说明](docs/BUILD.md)
 
@@ -80,7 +83,7 @@ Mac 包适用于 Apple Silicon（M 系列）；Windows 包适用于 10 / 11 x64�
 
 | 平台 | 下载 | 打开方式 |
 | --- | --- | --- |
-| macOS 13+ · Apple Silicon | [下载 Mac 版 · 约 6.5 MB](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-3.0.0-macOS-arm64.zip) | 解压后打开「静读.app」，可拖入「应用程序」并创建桌面替身 |
+| macOS 13+ · Apple Silicon | [下载 Mac 版 · 约 6.5 MB](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-3.0.0-macOS-arm64-guided.zip) | 解压后打开「静读-开始使用」文件夹；内有 App、设置快捷链接和首次打开引导 |
 | Windows 10 / 11 · x64 | [下载 Windows 预览版 · 约 164 MB](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-3.0.0-Windows-x64.zip) | 完整解压后打开 `QuietReader.exe`；包内脚本可创建桌面快捷方式 |
 | 源码 | [浏览代码](src) / [下载源码包](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-3.0.0-source.zip) | MIT 许可，自由学习与修改 |
 

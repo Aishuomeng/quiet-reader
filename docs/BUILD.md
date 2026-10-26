@@ -26,6 +26,8 @@ npm start
 ```sh
 python3 scripts/build_mac.py
 # 输出 dist/静读.app
+python3 scripts/package_mac.py
+# 输出带首次打开引导的 Mac 压缩包及单独引导包
 ```
 
 脚本构建临时 App、复制资源、临时签名并验证签名。发布商店或公证版本需自行配置 Apple 开发者证书与公证，当前仓库不包含任何证书。
