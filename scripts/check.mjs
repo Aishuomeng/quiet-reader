@@ -41,3 +41,13 @@ const skinsCSS=fs.readFileSync(path.join(root,'src/skins.css'),'utf8');
 assert.doesNotMatch(skinsCSS,/\.scene\{[^}]*background-image:/,'Skin rules must not override selected background');
 assert.match(source,/covered\|\|document.querySelector\('dialog\[open\]'\)/,'Reading hotkeys must not run behind covers or dialogs');
 console.log('PASS: background selection, custom-image precedence, solid colors, dialog and cover shortcut guards.');
+
+assert.match(source,/\$\('settings'\)\.classList\.contains\('open'\)/,'Settings panel must block reading shortcuts');
+let panel='',keyHandler,chapterChanges=0;
+const keyContext={covered:false,current:{chapter:1},document:{addEventListener(_event,fn){keyHandler=fn},querySelector(){return panel==='dialog'?{}:null}},$:id=>({classList:{contains:()=>panel===id}}),pause(){},go(){chapterChanges++}};
+vm.runInNewContext(source.split('\n').find(line=>line.startsWith("document.addEventListener('keydown'")),keyContext);
+const rightKey=()=>({key:'ArrowRight',code:'ArrowRight',target:{tagName:'DIV'},preventDefault(){}});
+for(const openPanel of ['settings','sidebar','dialog']){panel=openPanel;keyHandler(rightKey());assert.equal(chapterChanges,0,'Arrow key must not change chapter with '+openPanel+' open')}
+panel='';keyContext.covered=true;keyHandler(rightKey());assert.equal(chapterChanges,0);
+keyContext.covered=false;keyHandler(rightKey());assert.equal(chapterChanges,1,'Arrow key should change chapter when reading');
+console.log('PASS: ArrowRight is isolated from settings, directory, dialogs and cover screen.');
