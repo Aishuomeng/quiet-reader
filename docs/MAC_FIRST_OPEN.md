@@ -2,6 +2,12 @@
 
 ## 已经下载 App：先拿快捷入口
 
+### [↓ 下载设置快捷链接（无需解压）](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-Open-Settings.webloc)
+
+下载后双击 **QuietReader-Open-Settings.webloc**，可请求 macOS 打开设置。
+
+也可以使用包含图文指引的小包：
+
 ### [↓ 下载「首次打开引导」小包](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-Mac-First-Open.zip)
 
 下载后解压，双击里面的 **「打开隐私与安全性.webloc」**，可请求 macOS 打开对应设置页面。如果链接未响应，可双击「打不开？先看这里.html」，或手动进入系统设置 → 隐私与安全性。

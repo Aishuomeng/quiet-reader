@@ -10,7 +10,7 @@
 ### [↓ 下载 Mac 版](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-3.0.0-macOS-arm64-guided.zip)　｜　[↓ 下载 Windows 预览版](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-3.0.0-Windows-x64.zip)
 
 **[Mac 提示“Apple 无法验证”？点这里开始 →](docs/MAC_FIRST_OPEN.md)**  
-[已经下载 App？只下载首次打开引导（约 3 KB）](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-Mac-First-Open.zip)
+[↓ 直接下载设置快捷链接（无需解压）](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-Open-Settings.webloc) · [下载图文引导（约 3 KB）](https://github.com/Aishuomeng/quiet-reader/releases/download/v3.0.0/QuietReader-Mac-First-Open.zip)
 
 [全部发行文件](https://github.com/Aishuomeng/quiet-reader/releases/tag/v3.0.0) · [使用指南](docs/USER_GUIDE.md) · [构建说明](docs/BUILD.md)
 
