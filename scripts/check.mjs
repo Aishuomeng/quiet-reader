@@ -1,0 +1,43 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import vm from 'node:vm';
+import {createRequire} from 'node:module';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+const root=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const require=createRequire(import.meta.url);
+const source=fs.readFileSync(path.join(root,'src/app.js'),'utf8');
+const html=fs.readFileSync(path.join(root,'src/index.html'),'utf8');
+new vm.Script(source);
+for(const file of ['main.cjs','preload.cjs','storage.cjs'])new vm.Script(fs.readFileSync(path.join(root,'desktop',file),'utf8'));
+const ids=new Set([...html.matchAll(/id="([^"]+)"/g)].map(m=>m[1]));
+for(const match of source.matchAll(/\$\('([^']+)'\)/g))assert.ok(ids.has(match[1]),'Missing UI control '+match[1]);
+const fn=source.slice(source.indexOf('function parseChapters'),source.indexOf('function sample'));
+const parse=vm.runInNewContext(fn+';parseChapters');
+assert.equal(parse('第一章 起点\n正文。\n第二章 下一站\n第二章内容。\n第三章 终点\n结束。').length,3);
+assert.equal(parse('无章节标题的正文。\n下一行。').length,1);
+assert.equal(parse('前言\n介绍\n第十二回风起\n内容\nChapter 2 Home\nmore').length,3);
+const {dataFile,validatePayload,allowedTitle}=require('../desktop/storage.cjs');
+assert.ok(dataFile('/tmp/reader','books','sample').endsWith('/books/sample.json'));
+for(const key of ['../secret','a/b','a\\b','', 'x'.repeat(101)])assert.throws(()=>dataFile('/tmp/reader','books',key));
+assert.throws(()=>dataFile('/tmp/reader','private','x'));
+assert.throws(()=>validatePayload(undefined));
+assert.throws(()=>allowedTitle('<script>'));
+assert.equal(allowedTitle('工作台'),'工作台');
+assert.match(html,/connect-src &#39;none&#39;|connect-src 'none'/);
+assert.match(source,/covered.*value|classList.toggle\('covered',value\)/);
+for(const skin of ['standard','anime','tech','stealth'])assert.ok(html.includes(`data-skin-choice="${skin}"`));
+console.log('PASS: JavaScript syntax, UI controls, chapter parsing, storage path validation, title allowlist, offline policy, four UI suites.');
+// Regression: skin CSS must not override selected or custom backgrounds.
+const sceneFn=source.slice(source.indexOf('function sceneBackground'),source.indexOf('function defaultSkinSettings'));
+const sceneBackground=vm.runInNewContext(sceneFn+';sceneBackground');
+for(const skin of ['standard','anime','tech']){
+ const rendered=['forest','dusk','ocean','plain'].map(scene=>sceneBackground(skin,scene,null,'#123456'));
+ assert.equal(new Set(rendered).size,4,skin+' scenes must be distinct');
+ assert.equal(rendered[3],'linear-gradient(#123456,#123456)');
+ assert.equal(sceneBackground(skin,'dusk','data:image/png;base64,AAAA','#123456'),'url("data:image/png;base64,AAAA")');
+}
+const skinsCSS=fs.readFileSync(path.join(root,'src/skins.css'),'utf8');
+assert.doesNotMatch(skinsCSS,/\.scene\{[^}]*background-image:/,'Skin rules must not override selected background');
+assert.match(source,/covered\|\|document.querySelector\('dialog\[open\]'\)/,'Reading hotkeys must not run behind covers or dialogs');
+console.log('PASS: background selection, custom-image precedence, solid colors, dialog and cover shortcut guards.');

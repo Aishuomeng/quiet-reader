@@ -1,0 +1,17 @@
+{
+  "name": "quiet-reader",
+  "productName": "静读 Quiet Reader",
+  "version": "3.0.0",
+  "description": "Offline novel reader with Standard, Sakura, Orbit and Workspace UI editions.",
+  "main": "desktop/main.cjs",
+  "author": "aishuomeng",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "check": "node scripts/check.mjs",
+    "build:mac": "python3 scripts/build_mac.py",
+    "build:win": "python3 scripts/build_windows.py"
+  },
+  "devDependencies": { "electron": "45.0.0" }
+}
